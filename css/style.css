@@ -32,6 +32,10 @@ h1, h2, p {
     color: white;
 }
 
+.button-style:active { /* 버튼 클릭중일 때 색 어둡게 */
+    background-color: #b46244;
+}
+
 .list-style-none {
     list-style: none; /* ul 리스트의 왼쪽 점 제거 */
 }
