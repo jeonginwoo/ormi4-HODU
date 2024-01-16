@@ -185,11 +185,12 @@ header p { /* 배너 설명 */
     width: 378px;
     height: 378px;
     object-fit: cover; /* 이미지 원본 비율 유지하면서 크기변경 가능 */
+    transition: transform 0.1s; /* 애니메이션 방식 설정 */
+    transform: scale(1); /* 이미지 작아지는 애니메이션 */
 }
 
-.image-list img:hover { /* 이미지 애니메이션 적용 */
-    transition: transform 0.1s ease;
-    transform: scale(1.1);
+.image-list img:hover {
+    transform: scale(1.1); /* 이미지 커지는 애니메이션 */
 }
 
 /******** main 끝 ********/
