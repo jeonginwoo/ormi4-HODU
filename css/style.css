@@ -1,0 +1,323 @@
+body {
+    padding: 0;
+    margin: 0;
+    min-width: 1278px; /* 확대 또는 화면이 좁아졌을 때 body 폭이 컨텐츠보다 좁아져 레이아웃이 바뀌는 현상 방지 */
+    font-family: 'pretendard';
+}
+
+.contents-center { /* 컨텐츠 중앙에 위치 */
+    margin: 0 auto;
+    max-width: 1278px;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+.txt-hide { /* IR 기법 */
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.button-style { /* 버튼 스타일 지정 */
+    border: 0;
+    height: 50px; /* 높이는 50px로 고정. 너비는 텍스트에 맞게 늘어나도록 따로 지정하지 않음 */
+    padding: 0 40px;
+    border-radius: 40px;
+    background-color: #D97652;
+    font-size: 16px;
+    color: white;
+}
+
+.list-style-none {
+    list-style: none; /* ul 리스트의 왼쪽 점 제거 */
+}
+
+.img-bottom-space-cut {
+    vertical-align: top; /* 이미지 아래 비는 공간 제거 */
+}
+
+.img-style {
+    border-radius: 30px;
+    box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.25);
+}
+
+.left-right-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 수직 방향 가운데 정렬 */
+}
+
+.align-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.point-color {
+    color: #D97652;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-top-28 {
+    margin-top: 28px;
+}
+
+.margin-top-40 {
+    margin-top: 40px;
+}
+
+.margin-top-68 {
+    margin-top: 68px;
+}
+
+.margin-top-80 {
+    margin-top: 80px;
+}
+
+.margin-top-100 {
+    margin-top: 100px;
+}
+
+.margin-top-120 {
+    margin-top: 120px;
+}
+
+.size-14 {
+    font-size: 14px;
+}
+
+.size-16 {
+    font-size: 16px;
+}
+
+.size-24 {
+    font-size: 24px;
+}
+
+.size-36 {
+    font-size: 36px;
+}
+
+.size-48 {
+    font-size: 48px;
+}
+
+.black-anchor:visited,
+.black-anchor:active,
+.black-anchor:link { /* 앵커 색상 지정 */
+    color: black;
+}
+
+.devide-line {
+    height: 1px;
+    background-color: rgba(196, 196, 196, 0.5);
+}
+
+
+/****************************/
+/******** header 시작 ********/
+header {
+    background-color: #F2E9D8;
+    height: 900px;
+}
+
+header > div {
+    height: 100%; /* benner-img를 바닥에 붙이기 위해 높이를 header와 맞춤 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-nav {
+    height: 102px;
+}
+
+.header-nav li { /* Home | About | Support | Download */
+    display: inline; /* 리스트를 한 라인으로 */
+    margin-right: 20px; /* 리스트 사이 간격 */
+}
+
+.header-nav a {
+    text-decoration: none; /* 앵커 밑줄 제거 */
+}
+
+.header-logo {
+    height: 40px;
+}
+
+.left-margin { /* Home | About | Support ||||| Download */
+    margin: 0 0 0 20px; /* 리스트와 Download 사이 간격 조절*/
+}
+
+header .header-content {
+    width: 695px;
+}
+
+header p { /* 배너 설명 */
+    width: 420px;
+}
+
+/******** header 끝 ********/
+/**************************/
+
+
+/**************************/
+/******** main 시작 ********/
+.main-top-section > div {
+    padding-left: 110px;
+}
+
+.image-list > ul {
+    margin: 70px 0 0 0;
+    padding: 0;
+}
+
+.image-list img {
+    width: 378px;
+    height: 378px;
+    object-fit: cover; /* 이미지 원본 비율 유지하면서 크기변경 가능 */
+}
+
+.image-list img:hover { /* 이미지 애니메이션 적용 */
+    transition: transform 0.1s ease;
+    transform: scale(1.1);
+}
+
+/******** main 끝 ********/
+/************************/
+
+
+/****************************/
+/******** footer 시작 ********/
+#map {
+    border-radius: 12px;
+    margin-top: 48px;
+}
+
+.footer-subscribe {
+    background-color: #263140;
+    border-radius: 30px;
+    color: white;
+    padding: 50px 58px;
+    position: relative;
+    z-index: 1;
+    transform: translate(0, 50%);
+}
+
+.footer-subscribe > div {
+    width: 471px;
+}
+
+.footer-subscribe > div > p {
+    color: #F2E9D8;
+}
+
+.footer-subscribe form {
+    background-color: white;
+    box-sizing: border-box;
+    width: 530px;
+    height: 60px;
+    border-radius: 60px;
+    padding: 0 6px 0 28px;
+}
+
+.footer-subscribe input {
+    display: inline-block;
+    width: 250px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    margin-left: 10px;
+    outline: none;
+}
+
+.footer-img-line {
+    position: relative;
+}
+
+.footer-img-line > img {
+    object-fit: cover; /* 이미지 원본 비율 유지하면서 크기변경 가능 */
+    width: 100%;
+    height: 340px;
+}
+
+.footer-img-line > a {
+    position: absolute;
+    right: 24px;
+    bottom: 19px;
+}
+
+.footer-img-line > a > img:hover {
+    background-image: url("../img/icon/scroll-top-btn-deep.png");
+}
+
+.footer-nav {
+    height: 160px;
+}
+
+.footer-nav li { /* Home | About | Support | Download */
+    display: inline; /* 리스트를 한 라인으로 */
+    margin-right: 20px; /* 리스트 사이 간격 */
+}
+
+.footer-nav a {
+    text-decoration: none; /* 앵커 밑줄 제거 */
+}
+
+/******** footer 끝 ********/
+/**************************/
+
+
+/***************************/
+/******** modal 시작 ********/
+#subscribe-modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    width: 600px;
+    height: 400px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    background-image: url("../img/modal-bg.png");
+    border-radius: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-content > img {
+    margin-top: 60px;
+}
+
+.modal-content > h2 {
+    margin-top: 24px;
+}
+
+.modal-content > p {
+    margin-top: 12px;
+}
+
+.modal-content > button {
+    margin-top: 38px;
+}
+
+/******** modal 끝 ********/
+/*************************/
+
