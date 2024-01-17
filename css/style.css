@@ -5,13 +5,19 @@ body {
     font-family: 'pretendard';
 }
 
+h1, h2, p {
+    margin: 0;
+}
+
+img {
+    vertical-align: top; /* 이미지 아래 비는 공간 제거 */
+}
+
 .contents-center { /* 컨텐츠 중앙에 위치 */
     margin: 0 auto;
     max-width: 1278px;
-}
-
-h1, h2, p {
-    margin: 0;
+    /* 반응형으로 제작할 때를 대비해서 width 속성 대신 사용 */
+    /* body의 min-width 값을 더 줄이거나 없애면 반응형 구현 */
 }
 
 .txt-hide { /* IR 기법 */
@@ -38,10 +44,6 @@ h1, h2, p {
 
 .list-style-none {
     list-style: none; /* ul 리스트의 왼쪽 점 제거 */
-}
-
-.img-bottom-space-cut {
-    vertical-align: top; /* 이미지 아래 비는 공간 제거 */
 }
 
 .img-style {
@@ -71,8 +73,8 @@ h1, h2, p {
     margin-top: 20px;
 }
 
-.margin-top-28 {
-    margin-top: 28px;
+.margin-top-30 {
+    margin-top: 30px;
 }
 
 .margin-top-40 {
@@ -126,6 +128,9 @@ h1, h2, p {
     background-color: rgba(196, 196, 196, 0.5);
 }
 
+.display-none {
+    display: none;
+}
 
 /****************************/
 /******** header 시작 ********/
@@ -147,7 +152,7 @@ header > div {
 
 .header-nav li { /* Home | About | Support | Download */
     display: inline; /* 리스트를 한 라인으로 */
-    margin-right: 20px; /* 리스트 사이 간격 */
+    margin-left: 30px; /* 리스트 사이 간격 */
 }
 
 .header-nav a {
@@ -159,7 +164,7 @@ header > div {
 }
 
 .left-margin { /* Home | About | Support ||||| Download */
-    margin: 0 0 0 20px; /* 리스트와 Download 사이 간격 조절*/
+    margin-left: 29px; /* 리스트와 Download 사이 간격 조절*/
 }
 
 header .header-content {
@@ -180,6 +185,10 @@ header p { /* 배너 설명 */
     padding-left: 110px;
 }
 
+.image-list {
+    margin-top: 88px;
+}
+
 .image-list > ul {
     margin: 70px 0 0 0;
     padding: 0;
@@ -189,12 +198,29 @@ header p { /* 배너 설명 */
     width: 378px;
     height: 378px;
     object-fit: cover; /* 이미지 원본 비율 유지하면서 크기변경 가능 */
-    transition: transform 0.1s; /* 애니메이션 방식 설정 */
+    transition: transform 0.1s ease; /* 애니메이션 방식 설정 */
     transform: scale(1); /* 이미지 작아지는 애니메이션 */
 }
 
 .image-list img:hover {
     transform: scale(1.1); /* 이미지 커지는 애니메이션 */
+}
+
+#inf-scroll-btn {
+    margin-top: 28px;
+}
+
+.stop-scroll-btn { /* 버튼 스타일 지정 */
+    height: 50px; /* 높이는 50px로 고정. 너비는 텍스트에 맞게 늘어나도록 따로 지정하지 않음 */
+    padding: 0 40px;
+    border-radius: 40px;
+    background-color: white;
+    font-size: 16px;
+    color: black;
+}
+
+.stop-scroll-btn:active { /* 버튼 클릭중일 때 색 어둡게 */
+    background-color: #d3d3d3;
 }
 
 /******** main 끝 ********/
@@ -215,7 +241,7 @@ header p { /* 배너 설명 */
     padding: 50px 58px;
     position: relative;
     z-index: 1;
-    transform: translate(0, 50%);
+    transform: translate(0, 50%);   /* 밑으로 height의 50%만큼 이동 */
 }
 
 .footer-subscribe > div {
@@ -245,33 +271,19 @@ header p { /* 배너 설명 */
     outline: none;
 }
 
-.footer-img-line {
-    position: relative;
-}
-
 .footer-img-line > img {
     object-fit: cover; /* 이미지 원본 비율 유지하면서 크기변경 가능 */
     width: 100%;
     height: 340px;
 }
 
-.footer-img-line > a {
-    position: absolute;
-    right: 24px;
-    bottom: 19px;
-}
-
-.footer-img-line > a > img:hover {
-    background-image: url("../img/icon/scroll-top-btn-deep.png");
-}
-
 .footer-nav {
     height: 160px;
 }
 
-.footer-nav li { /* Home | About | Support | Download */
+.footer-nav li { /* blog | instar | facebook | youtube */
     display: inline; /* 리스트를 한 라인으로 */
-    margin-right: 20px; /* 리스트 사이 간격 */
+    margin-left: 20px; /* 리스트 사이 간격 */
 }
 
 .footer-nav a {
@@ -326,3 +338,24 @@ header p { /* 배너 설명 */
 /******** modal 끝 ********/
 /*************************/
 
+/*****************************/
+/* 페이지 상단 스크롤 버튼 스타일 */
+.top-scroll {
+    position: fixed;
+    right: 24px;
+    bottom: 19px;
+    z-index: 100;
+}
+
+.top-scroll .top-scroll-deep { /* .top-scroll-light와 이미지 겹치고 안보이게 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.top-scroll:hover .top-scroll-deep {   /* 이미지 보이게 */
+    display: block;
+}
+
+/*****************************/

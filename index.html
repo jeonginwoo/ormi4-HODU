@@ -8,22 +8,23 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/kakaomap_style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
-    <script src="js/script.js"></script>
     <title>HODU</title>
 </head>
 <body>
 <header>
     <div class="contents-center">   <!-- 배경과 컨텐츠 분리 -->
-        <nav class="header-nav top-bottom-nav left-right-space-between">
+        <nav class="header-nav left-right-space-between">
             <div>
-                <img class="header-logo" src="img/HODU_logo.png" alt="호두 로고">
+                <a href="">
+                    <img class="header-logo" src="img/HODU_logo.png" alt="호두 로고">
+                </a>
             </div>
             <ul class="size-16 list-style-none">
-                <li><a class="black-anchor" href="#">Home</a></li>
-                <li><a class="black-anchor" href="#">About</a></li>
-                <li><a class="black-anchor" href="#">Support</a></li>
-                <li class="left-margin">
-                    <button class="button-style">Download</button>
+                <li><a class="black-anchor" href="">Home</a></li>
+                <li><a class="black-anchor" href="">About</a></li>
+                <li><a class="black-anchor" href="">Support</a></li>
+                <li>
+                    <button class="left-margin button-style">Download</button>
                 </li>
             </ul>
         </nav>
@@ -41,10 +42,10 @@
                         industry's standard dummy text ever since the 1500s, when an unknown
                     </p>
                 </div>
-                <button class="button-style margin-top-40" href="#">Download</button>
+                <button class="button-style margin-top-40">Download</button>
             </div>
             <div>
-                <img class="img-bottom-space-cut" src="img/box-hat-cat" alt="박스모자 쓰고있는 고양이">
+                <img src="img/box-hat-cat" alt="박스모자 쓰고있는 고양이">
             </div>
         </section>
     </div>
@@ -58,7 +59,7 @@
                     Lorem Ipsum is simply
                     dummy text of the printing and dummy text
                 </h2>
-                <p class="size-16 margin-top-40">
+                <p class="size-16 margin-top-30">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>
             </div>
@@ -78,39 +79,39 @@
             <div class="image-list">
                 <ul class="list-style-none left-right-space-between">
                     <li>
-                        <img class="img-style" src="img/cat/cat_1.png" alt="">
+                        <img class="img-style" src="img/cat/cat_1.png" alt="고양이1">
                     </li>
                     <li>
-                        <img class="img-style" src="img/cat/cat_2.png" alt="">
+                        <img class="img-style" src="img/cat/cat_2.png" alt="고양이2">
                     </li>
                     <li>
-                        <img class="img-style" src="img/cat/cat_3.png" alt="">
+                        <img class="img-style" src="img/cat/cat_3.png" alt="고양이3">
                     </li>
                 </ul>
                 <ul class="list-style-none left-right-space-between">
                     <li>
-                        <img class="img-style" src="img/cat/cat_4.png" alt="">
+                        <img class="img-style" src="img/cat/cat_4.png" alt="고양이4">
                     </li>
                     <li>
-                        <img class="img-style" src="img/cat/cat_5.png" alt="">
+                        <img class="img-style" src="img/cat/cat_5.png" alt="고양이5">
                     </li>
                     <li>
-                        <img class="img-style" src="img/cat/cat_6.png" alt="">
+                        <img class="img-style" src="img/cat/cat_6.png" alt="고양이6">
                     </li>
                 </ul>
             </div>
             <div class="margin-top-100">
                 <p class="size-24 bold">Continue exploring HODU</p>
-                <button class="button-style margin-top-28">Show more</button>
+                <button id="inf-scroll-btn" class="button-style">Show more</button>
             </div>
         </section>
         <div class="devide-line margin-top-68"></div>
     </div>
 </main>
 <footer>
-    <div class="contents-center">
-        <article>
-            <h2 class="size-36 margin-top-80">
+    <div class="on-off contents-center">
+        <article class="margin-top-80">
+            <h2 class="size-36">
                 Where you’ll be
             </h2>
             <p class="size-16 margin-top-20">
@@ -119,8 +120,6 @@
             <div id="map" style="width:100%; height:520px;"></div>
             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c8d406a87226b42a7ca1ba502794522e"></script>
             <script src="js/kakaomap_script.js"></script>
-
-
         </article>
         <article class="footer-subscribe left-right-space-between">
             <div>
@@ -136,48 +135,58 @@
                     </p>
                 </div>
             </div>
-            <form class="left-right-space-between" action="">
-                <div class="left-right-space-between">
-                    <img src="img/icon/icon-mail.png" alt="">
+            <form class="left-right-space-between" action="#">
+                <label class="left-right-space-between">
+                    <img src="img/icon/icon-mail.png" alt="메일 아이콘">
                     <input type="text" placeholder="Enter your e-mail address">
-                </div>
+                </label>
                 <button id="open-subscribe-modal" class="button-style">Subscribe</button>
             </form>
         </article>
     </div>
-    <article class="footer-img-line">
+    <article class="on-off footer-img-line">
         <h2 class="txt-hide">Footer cat benner</h2>
-        <img class="img-bottom-space-cut" src="img/cat/footer-cat-bg.png" alt="">
-        <a href="#"><img src="img/icon/scroll-top-btn-light.png" alt=""></a>
+        <img src="img/cat/footer-cat-bg.png" alt="고양이 베너">
     </article>
     <div class="contents-center">
-        <nav class="footer-nav top-bottom-nav left-right-space-between">
+        <nav class="footer-nav left-right-space-between">
             <div>
-                <img src="img/HODU_logo.png" alt="호두 로고">
+                <a href="">
+                    <img src="img/HODU_logo.png" alt="호두 로고">
+                </a>
             </div>
             <ul class="size-16 list-style-none">
-                <li><a href="#">
-                    <img src="img/icon/icon-blog.png" alt="">
+                <li><a href="">
+                    <img src="img/icon/icon-blog.png" alt="블로그 아이콘">
                 </a></li>
-                <li><a href="#">
-                    <img src="img/icon/icon-insta.png" alt="">
+                <li><a href="">
+                    <img src="img/icon/icon-insta.png" alt="인스타 아이콘">
                 </a></li>
-                <li><a href="#">
-                    <img src="img/icon/icon-facebook.png" alt="">
+                <li><a href="">
+                    <img src="img/icon/icon-facebook.png" alt="페이스북 아이콘">
                 </a></li>
-                <li><a href="#">
-                    <img src="img/icon/icon-youtube.png" alt="">
+                <li><a href="">
+                    <img src="img/icon/icon-youtube.png" alt="유튜브 아이콘">
                 </a></li>
             </ul>
         </nav>
     </div>
 </footer>
+
+<a class="top-scroll" href="#">
+    <img class="top-scroll-light" src="img/icon/scroll-top-btn-light.png" alt="페이지 상단 스크롤 버튼">
+    <img class="top-scroll-deep" src="img/icon/scroll-top-btn-deep.png" alt="페이지 상단 스크롤 버튼">
+</a>
+
+<script src="js/inf_scroll.js"></script>
+
 <article id="subscribe-modal">
+    <h2 class="txt-hide">구독 감사 카드</h2>
     <div class="modal-content align-center">
         <img src="img/cat/cat-blush.png" alt="고양이 홍조">
-        <h2 class="point-color size-36">
+        <p class="point-color size-36 bold">
             Thank you!
-        </h2>
+        </p>
         <p class="size-14">
             Lorem Ipsum is simply dummy text of the printing industry.
         </p>
@@ -186,6 +195,8 @@
         </button>
     </div>
 </article>
-<script>toggleModal()</script>
+
+<script src="js/modal.js"></script>
+
 </body>
 </html>

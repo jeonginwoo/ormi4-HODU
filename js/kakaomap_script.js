@@ -22,7 +22,7 @@ var content =
     '<div class="wrap">' +
     '    <div class="info">' +
     '        <div class="title">' +
-    '            WeNiv ' +
+    '            위니브 ' +
     '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' +
     '        </div>' +
     '        <div class="body">' +
