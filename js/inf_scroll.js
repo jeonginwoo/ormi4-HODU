@@ -18,7 +18,7 @@ async function fetchImages(pageNum) {
 }
 
 function makeImageList(datas) {
-    imageList.innerHTML += `<ul class="list-style-none left-right-space-between">
+    imageList.innerHTML += `<ul class="list-style-none row-space-between">
                                 <li><img class="img-style" src='${datas[0].download_url}' alt='이미지${3 * pageToFetch - 2}'></li>
                                 <li><img class="img-style" src='${datas[1].download_url}' alt='이미지${3 * pageToFetch - 1}'></li>
                                 <li><img class="img-style" src='${datas[2].download_url}' alt='이미지${3 * pageToFetch}'></li>
