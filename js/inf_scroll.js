@@ -24,9 +24,6 @@ function makeImageList(datas) {
                                 <li><img class="img-style" src='${datas[2].download_url}' alt='이미지${3 * pageToFetch}'></li>
                             </ul>
                             `;
-    // datas.forEach((item) => {
-    //     imageList.innerHTML += ``;
-    // })
 }
 
 
@@ -43,8 +40,8 @@ infScrollBtn.addEventListener('click', function () {
         infScrollBtn.innerHTML = "Stop scrolling"; /* 버튼 내용 변경 */
         infScrollBtn.classList.add("stop-scroll-btn");  /* 버튼 스타일 변경 */
         infScrollBtn.classList.remove("button-style"); /* 기존 스타일 삭제 */
-        footerHtml.forEach((item)=>{
-            item.classList.add("display-none"); /* footer 숨기기 */
+        footerHtml.forEach((item)=>{ /* footer 숨기기 */
+            item.classList.add("display-none");
         })
         for (let i = 0; i < createLineNum; i++) {
             fetchImages(pageToFetch++);
@@ -54,8 +51,8 @@ infScrollBtn.addEventListener('click', function () {
         infScrollBtn.innerHTML = "Show more"; /* 버튼 내용 변경 */
         infScrollBtn.classList.remove("stop-scroll-btn");
         infScrollBtn.classList.add("button-style"); /* 기존 스타일로 변경 */
-        footerHtml.forEach((item)=>{
-            item.classList.remove("display-none"); /* footer 숨기기 */
+        footerHtml.forEach((item)=>{ /* footer 보이기 */
+            item.classList.remove("display-none");
         })
     }
 })
@@ -82,10 +79,3 @@ window.addEventListener('scroll', () => {
         }
     }, throttleDelay);
 });
-
-/* 버튼 누르면 이미지 생성 */
-// infScrollBtn.addEventListener('click', function () {
-//     for (let i = 0; i < createLineNum; i++) {
-//         fetchImages(pageToFetch++);
-//     }
-// })
