@@ -233,6 +233,7 @@ header p { /* 배너 설명 */
 /****************************/
 /******** footer 시작 ********/
 #map {
+    background-color: #D3D3D3;
     border-radius: 12px;
     margin-top: 48px;
 }
