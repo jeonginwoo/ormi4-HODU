@@ -242,7 +242,7 @@ header p { /* 배너 설명 */
     padding: 50px 58px;
     position: relative;
     z-index: 1;
-    transform: translate(0, 50%);   /* 밑으로 height의 50%만큼 이동 */
+    transform: translate(0, 50%); /* 밑으로 height의 50%만큼 이동 */
 }
 
 .footer-subscribe > div {
@@ -297,22 +297,8 @@ header p { /* 배너 설명 */
 
 /***************************/
 /******** modal 시작 ********/
-#subscribe-modal {
-    display: none;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-}
 
 .modal-content {
-    width: 600px;
-    height: 400px;
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
-    background-image: url("../img/modal-bg.png");
     border-radius: 30px;
     position: fixed;
     top: 50%;
@@ -320,20 +306,59 @@ header p { /* 배너 설명 */
     transform: translate(-50%, -50%);
 }
 
-.modal-content > img {
+/* 구독 카드 모달 */
+#subscribe-modal {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#subscribe-modal > .modal-content {
+    width: 600px;
+    height: 400px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    background-image: url("../img/modal-bg.png");
+}
+
+#subscribe-modal > .modal-content > img {
     margin-top: 60px;
 }
 
-.modal-content > h2 {
+#subscribe-modal > .modal-content > h2 {
     margin-top: 24px;
 }
 
-.modal-content > p {
+#subscribe-modal > .modal-content > p {
     margin-top: 12px;
 }
 
-.modal-content > button {
+#subscribe-modal > .modal-content > button {
     margin-top: 38px;
+}
+
+/* 원본 이미지 모달 */
+#img-modal {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#img-modal > .modal-content {
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.6);
+}
+
+#img-modal img {
+    border-radius: 30px;
+    max-width: 1000px;
+    max-height: 90vh;   /* 보이는 화면에서 최대 90% 높이 적용 */
 }
 
 /******** modal 끝 ********/
@@ -355,7 +380,7 @@ header p { /* 배너 설명 */
     display: none;
 }
 
-.top-scroll:hover .top-scroll-deep {   /* 이미지 보이게 */
+.top-scroll:hover .top-scroll-deep { /* 이미지 보이게 */
     display: block;
 }
 

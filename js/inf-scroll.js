@@ -19,20 +19,21 @@ async function fetchImages(pageNum) {
 
 function makeImageList(datas) {
     imageList.innerHTML += `<ul class="list-style-none row-space-between">
-                                <li><img class="img-style" src='${datas[0].download_url}' alt='이미지${3 * pageToFetch - 2}'></li>
-                                <li><img class="img-style" src='${datas[1].download_url}' alt='이미지${3 * pageToFetch - 1}'></li>
-                                <li><img class="img-style" src='${datas[2].download_url}' alt='이미지${3 * pageToFetch}'></li>
+                                <li><img class="img-modal-btn img-style" src='${datas[0].download_url}' alt='이미지${3 * pageToFetch - 2}'></li>
+                                <li><img class="img-modal-btn img-style" src='${datas[1].download_url}' alt='이미지${3 * pageToFetch - 1}'></li>
+                                <li><img class="img-modal-btn img-style" src='${datas[2].download_url}' alt='이미지${3 * pageToFetch}'></li>
                             </ul>
                             `;
 }
 
 
-/* 무한 스크롤 */
-
 
 const footerHtml = document.querySelectorAll(".on-off")
 const infScrollBtn = document.querySelector("#inf-scroll-btn");
 const createLineNum = 3;    /* 생성할 이미지 라인 수 */
+
+
+/* 버튼 클릭 동작 */
 let isScrollBtnOn = false;
 infScrollBtn.addEventListener('click', function () {
     if (isScrollBtnOn === false) {
@@ -57,6 +58,9 @@ infScrollBtn.addEventListener('click', function () {
     }
 })
 
+
+
+/* 무한 스크롤 */
 let throttleTimer;
 const throttleDelay = 500; // 딜레이 설정 (ms)
 window.addEventListener('scroll', () => {
@@ -72,7 +76,7 @@ window.addEventListener('scroll', () => {
         // 뷰포트의 높이 + 스크롤된 길이
         // 화면에 로딩된 페이지 전체 높이
         // 뷰포트의 높이 + 스크롤된 길이 + 10 === 화면에 로딩된 페이지의 전체 높이 (+10은 여분 높이)
-        if (window.innerHeight + document.documentElement.scrollTop + 10 >= document.documentElement.offsetHeight && isScrollBtnOn) {
+        if (window.innerHeight + document.documentElement.scrollTop + 10 >= document.documentElement.offsetHeight && isScrollBtnOn) {   /* 버튼이 눌렸을 때만 동작 */
             for (let i = 0; i < createLineNum; i++) {
                 fetchImages(pageToFetch++);
             }
