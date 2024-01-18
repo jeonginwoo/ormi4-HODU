@@ -1,5 +1,4 @@
 /* 이미지 불러오기 */
-
 const imageList = document.querySelector(".image-list");
 let pageToFetch = 1;
 
@@ -11,26 +10,28 @@ async function fetchImages(pageNum) {
         }
 
         const datas = await response.json();
-        makeImageList(datas);
+        makeImageList(datas, pageNum);
     } catch (error) {
         console.error('데이터를 가져오는데 문제가 발생했습니다 :', error);
     }
 }
 
-function makeImageList(datas) {
+function makeImageList(datas, pageNum) {
     imageList.innerHTML += `<ul class="list-style-none row-space-between">
-                                <li><img class="img-modal-btn img-style" src='${datas[0].download_url}' alt='이미지${3 * pageToFetch - 2}'></li>
-                                <li><img class="img-modal-btn img-style" src='${datas[1].download_url}' alt='이미지${3 * pageToFetch - 1}'></li>
-                                <li><img class="img-modal-btn img-style" src='${datas[2].download_url}' alt='이미지${3 * pageToFetch}'></li>
+                                <li><img class="img-modal-btn img-style" src='${datas[0].download_url}' alt='이미지${3 * pageNum - 2}'></li>
+                                <li><img class="img-modal-btn img-style" src='${datas[1].download_url}' alt='이미지${3 * pageNum - 1}'></li>
+                                <li><img class="img-modal-btn img-style" src='${datas[2].download_url}' alt='이미지${3 * pageNum}'></li>
                             </ul>
                             `;
 }
 
 
-
-const footerHtml = document.querySelectorAll(".on-off")
+// <footer> 에서 on/off 할 요소
+const footerHtml = document.querySelectorAll(".on-off");
+// 무한 스크롤 버튼 요소
 const infScrollBtn = document.querySelector("#inf-scroll-btn");
-const createLineNum = 3;    /* 생성할 이미지 라인 수 */
+// 생성할 이미지 라인 수
+const createLineNum = 3;
 
 
 /* 버튼 클릭 동작 */

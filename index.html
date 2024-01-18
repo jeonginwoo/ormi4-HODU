@@ -112,12 +112,14 @@
 <footer>
     <div class="on-off contents-center">
         <article class="margin-top-80">
-            <h2 class="size-36">
+            <h2 class="txt-hide">찾아오는 길</h2>
+            <p class="size-36 bold">
                 Where you’ll be
-            </h2>
+            </p>
             <p class="size-16 margin-top-20">
                 330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea
             </p>
+            <!-- 카카오맵 api -->
             <div id="map" style="width:100%; height:520px;"></div>
             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c8d406a87226b42a7ca1ba502794522e"></script>
             <script src="js/kakaomap.js"></script>
@@ -174,13 +176,16 @@
     </div>
 </footer>
 
+<!-- 페이지 상단 이동 버튼 -->
 <a class="top-scroll" href="#">
     <img class="top-scroll-light" src="img/icon/scroll-top-btn-light.png" alt="페이지 상단 스크롤 버튼">
     <img class="top-scroll-deep" src="img/icon/scroll-top-btn-deep.png" alt="페이지 상단 스크롤 버튼">
 </a>
 
+<!-- 무한 스크롤 스크립트 -->
 <script src="js/inf-scroll.js"></script>
 
+<!-- 모달창 스크립트 -->
 <script src="js/modal.js"></script>
 
 <!-- 이미지 리스트의 이미지 클릭 시 생기는 모달창 -->
@@ -190,7 +195,6 @@
         <!-- 이미지 들어가는 자리 -->
     </div>
 </article>
-
 <script>toggleImgModal();</script>
 
 <!-- 구독버튼 클릭 시 생기는 모달창 -->
@@ -209,7 +213,6 @@
         </button>
     </div>
 </article>
-
 <script>toggleSubscribeModal();</script>
 
 </body>

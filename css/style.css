@@ -298,7 +298,7 @@ header p { /* 배너 설명 */
 /***************************/
 /******** modal 시작 ********/
 
-.modal-content {
+.modal-content {    /* 모달 컨텐츠 화면 가운데에 위치하기 */
     border-radius: 30px;
     position: fixed;
     top: 50%;
@@ -314,7 +314,7 @@ header p { /* 배너 설명 */
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 #subscribe-modal > .modal-content {
@@ -357,15 +357,16 @@ header p { /* 배너 설명 */
 
 #img-modal img {
     border-radius: 30px;
-    max-width: 1000px;
+    max-width: 80vh;
     max-height: 90vh;   /* 보이는 화면에서 최대 90% 높이 적용 */
 }
 
 /******** modal 끝 ********/
 /*************************/
 
-/*****************************/
-/* 페이지 상단 스크롤 버튼 스타일 */
+
+/**********************/
+/* 페이지 상단 이동 버튼 */
 .top-scroll {
     position: fixed;
     right: 24px;
