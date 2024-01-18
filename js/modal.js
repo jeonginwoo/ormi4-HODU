@@ -32,7 +32,6 @@ function toggleImgModal() {
         // 모달 외부 클릭 시 닫기
         if (event.target === modal) {
             modal.classList.add("display-none");
-            originalImg.innerHTML = "";
         }
     });
 }
