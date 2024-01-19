@@ -357,7 +357,6 @@ footer{
 }
 
 #img-modal img {
-    border-radius: 30px;
     max-width: 80vw;
     max-height: 90vh;   /* 보이는 화면에서 최대 90% 높이 적용 */
 }
