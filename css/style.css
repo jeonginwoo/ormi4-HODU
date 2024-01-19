@@ -368,21 +368,33 @@ footer{
 
 /**********************/
 /* 페이지 상단 이동 버튼 */
-.top-scroll {
+.top-scroll, .bottom-scroll {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0,0,0,0);
+    border: 0;
     position: fixed;
-    right: 24px;
-    bottom: 19px;
     z-index: 100;
 }
 
-.top-scroll .top-scroll-deep { /* .top-scroll-light와 이미지 겹치고 안보이게 */
+.top-scroll {
+    right: 24px;
+    bottom: 80px;
+}
+
+.bottom-scroll {
+    right: 24px;
+    bottom: 20px;
+}
+
+.top-scroll-deep, .bottom-scroll-deep { /* .top-scroll-light와 이미지 겹치고 안보이게 */
     position: absolute;
     top: 0;
     left: 0;
     display: none;
 }
 
-.top-scroll:hover .top-scroll-deep { /* 이미지 보이게 */
+.top-scroll:hover .top-scroll-deep, .bottom-scroll:hover .bottom-scroll-deep { /* 이미지 보이게 */
     display: block;
 }
 
