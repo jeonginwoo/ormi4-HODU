@@ -120,7 +120,22 @@
                 330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea
             </p>
             <!-- 카카오맵 api -->
-            <div id="map" style="width:100%; height:520px;"></div>
+            <div id="container" class="view_map">
+                <div id="mapWrapper" style="width:100%;height:520px;position:relative;">
+                    <div id="map" style="width:100%;height:100%"></div> <!-- 지도를 표시할 div 입니다 -->
+                    <input type="button" id="btnRoadview" onclick="toggleMap(false)" title="로드뷰 보기" value="로드뷰">
+                    <button class="moveMap" onclick="mapPanTo()">
+                        <img src="img/icon/icon-location.png" alt="위치 초기화">
+                    </button>
+                </div>
+                <div id="rvWrapper" style="width:100%;height:520px;position:absolute;top:0;left:0;">
+                    <div id="roadview" style="height:100%"></div> <!-- 로드뷰를 표시할 div 입니다 -->
+                    <input type="button" id="btnMap" onclick="toggleMap(true)" title="지도 보기" value="지도">
+                    <button class="moveMap" onclick="rvPosition()">
+                        <img src="img/icon/icon-location.png" alt="위치 초기화">
+                    </button>
+                </div>
+            </div>
             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c8d406a87226b42a7ca1ba502794522e"></script>
             <script src="js/kakaomap.js"></script>
         </article>
