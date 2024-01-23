@@ -8,6 +8,17 @@
 ## 프로젝트 기간
 >2024.01.15 ~ 2024.01.23
 
+## 프로젝트 제작 일지
+* [1일차 : header](https://smiling-saw-129.notion.site/HODU-header-57048ae478534717ad27155507ddb0a8?pvs=4)
+* [2일차 : main, footer, subscribe modal](https://smiling-saw-129.notion.site/HODU-main-footer-modal-dabb1d0e6c264ecd83359ed164fa5744?pvs=4)
+* [3일차 : 무한 스크롤](https://smiling-saw-129.notion.site/HODU-inf-scrolling-a9f334101b4e4ca4b54ee669f2dfdab2?pvs=4)
+* [4일차 : 원본 이미지 모달](https://smiling-saw-129.notion.site/HODU-a53b6011b4f44f54b8d4a54e26f58ae3?pvs=4)
+* [5일차 : 지도 꾸미기](https://smiling-saw-129.notion.site/HODU-625931541c874681a40dabbdf2890ef4?pvs=4)
+* 7일차 : 휴식
+* 8일차 : 휴식
+* [9일차 : README 작성]()
+* [10일차 : 지도 로드맵 수정](https://smiling-saw-129.notion.site/HODU-e8286f09c91c401a95355b282131d118?pvs=4)
+
 ## 목차
 [1. 목표](#1-목표)<br/>
 [2. 개발환경](#2-개발환경)<br/>
