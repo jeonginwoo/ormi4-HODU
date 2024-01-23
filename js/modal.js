@@ -25,6 +25,7 @@ function toggleImgModal() {
     window.addEventListener("click", function (event) {
         // 클릭한 요소가 이미지 리스트의 이미지이면 원본 이미지 모달창 생성
         if (event.target.className === imgList.querySelector("img").className) {
+            console.log("img-modal");
             modal.classList.remove("display-none");
             originalImg.innerHTML = `<img src="${event.target.src}">`;
         }

@@ -75,10 +75,6 @@ window.addEventListener('scroll', () => {
     throttleTimer = setTimeout(() => {
         throttleTimer = null;
 
-        // 스크롤이 상단으로부터 얼마나 이동했는지 알아야 합니다.
-        // 현재 페이지 높이 + 아래로 이동한 스크롤 길이
-        // 뷰포트의 높이 + 스크롤된 길이
-        // 화면에 로딩된 페이지 전체 높이
         // 뷰포트의 높이 + 스크롤된 길이 + 10 === 화면에 로딩된 페이지의 전체 높이 (+10은 여분 높이)
         if (window.innerHeight + document.documentElement.scrollTop + 10 >= document.documentElement.offsetHeight && isScrollBtnOn) {   /* 버튼이 눌렸을 때만 동작 */
             // for (let i = 0; i < createLineNum; i++) {

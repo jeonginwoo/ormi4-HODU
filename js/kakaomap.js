@@ -1,4 +1,3 @@
-
 var container = document.getElementById('container'), // 지도와 로드뷰를 감싸고 있는 div 입니다
     mapWrapper = document.getElementById('mapWrapper'), // 지도를 감싸고 있는 div 입니다
     btnRoadview = document.getElementById('btnRoadview'), // 지도 위의 로드뷰 버튼, 클릭하면 지도는 감춰지고 로드뷰가 보입니다
@@ -22,19 +21,26 @@ var map = new kakao.maps.Map(mapContainer, mapOption);
 // var roadviewClient = new kakao.maps.RoadviewClient(),
 //     roadview = new kakao.maps.Roadview(rvContainer);	// 로드뷰 객체를 생성합니다
 //
-// roadviewClient.getNearestPanoId(placePosition, 60, function(panoId) {
+// roadviewClient.getNearestPanoId(placePosition, 60, function(panoId) { // 반경 60
 //
 //     roadview.setPanoId(panoId, placePosition);
 // });
 
 var roadview = new kakao.maps.Roadview(rvContainer, {
-    panoId : 1148584505, // 로드뷰 시작 지역의 고유 아이디 값
-    panoX : 126.97837, // panoId가 유효하지 않을 경우 지도좌표를 기반으로 데이터를 요청할 수평 좌표값
-    panoY : 37.56613, // panoId가 유효하지 않을 경우 지도좌표를 기반으로 데이터를 요청할 수직 좌표값
+    panoId: 1148584505, // 로드뷰 시작 지역의 고유 아이디 값
+    panoX: 126.571466, // panoId가 유효하지 않을 경우 지도좌표를 기반으로 데이터를 요청할 수평 좌표값
+    panoY: 33.442314, // panoId가 유효하지 않을 경우 지도좌표를 기반으로 데이터를 요청할 수직 좌표값
     pan: 218, // 로드뷰 처음 실행시에 바라봐야 할 수평 각
-    tilt: -12, // 로드뷰 처음 실행시에 바라봐야 할 수직 각
+    tilt: 0, // 로드뷰 처음 실행시에 바라봐야 할 수직 각
     zoom: -1 // 로드뷰 줌 초기값
 });
+
+// 초기 뷰포인트 저장
+// 더 좋은 방법이 있을거 같다.
+var viewpoint = roadview.getViewpoint();    // 이유는 모르겠지만 값이 다 0으로 저장됨
+viewpoint.pan = 218;
+viewpoint.tilt = 0;
+viewpoint.zoom = -1;
 
 // 지도 중심을 표시할 마커를 생성하고 특정 장소 위에 표시합니다
 var mapMarker = new kakao.maps.Marker({
@@ -75,7 +81,7 @@ var overlay = new kakao.maps.CustomOverlay({
 });
 
 // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
-kakao.maps.event.addListener(mapMarker, 'click', function() {
+kakao.maps.event.addListener(mapMarker, 'click', function () {
     overlay.setMap(map);
 });
 
@@ -86,7 +92,7 @@ function closeOverlay() {
 
 
 // 로드뷰 초기화가 완료되면
-kakao.maps.event.addListener(roadview, 'init', function() {
+kakao.maps.event.addListener(roadview, 'init', function () {
 
     // 로드뷰에 특정 장소를 표시할 마커를 생성하고 로드뷰 위에 표시합니다
     var rvMarker = new kakao.maps.Marker({
@@ -94,6 +100,7 @@ kakao.maps.event.addListener(roadview, 'init', function() {
         map: roadview
     });
 });
+
 
 // 지도와 로드뷰를 감싸고 있는 div의 class를 변경하여 지도를 숨기거나 보이게 하는 함수입니다
 function toggleMap(active) {
@@ -118,5 +125,7 @@ function mapPanTo() {
 }
 
 function rvPosition() {
+    // 로드뷰 위치 이동
     roadview.setPanoId(1148584505, placePosition);
+    roadview.setViewpoint(viewpoint);
 }
