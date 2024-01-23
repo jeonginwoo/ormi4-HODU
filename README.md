@@ -8,6 +8,8 @@
 ## 프로젝트 기간
 >2024.01.15 ~ 2024.01.23
 
+<br/>
+
 ## 프로젝트 제작 일지
 * [1일차 : header](https://smiling-saw-129.notion.site/HODU-header-57048ae478534717ad27155507ddb0a8?pvs=4)
 * [2일차 : main, footer, subscribe modal](https://smiling-saw-129.notion.site/HODU-main-footer-modal-dabb1d0e6c264ecd83359ed164fa5744?pvs=4)
@@ -19,6 +21,8 @@
 * [9일차 : README 작성]()
 * [10일차 : 지도 로드맵 수정](https://smiling-saw-129.notion.site/HODU-e8286f09c91c401a95355b282131d118?pvs=4)
 
+<br/>
+
 ## 목차
 [1. 목표](#1-목표)<br/>
 [2. 개발환경](#2-개발환경)<br/>
@@ -27,9 +31,13 @@
 [5. 추가하고 싶은 기능](#5-추가하고-싶은-기능)<br/>
 [6. 프로젝트 후기](#6-프로젝트-후기)<br/>
 
+<br/>
+
 ## 1. 목표
 * 피그마 디자인만 보고 페이지를 구현
 * 명확한 기능 명세는 없기 때문에 어느 정도 각자 원하는 기능을 추가해도 상관없다.
+
+<br/>
 
 ## 2. 개발환경
 * FrontEnd   
@@ -37,10 +45,14 @@
   <img src="img/readme/htmlcssjs.png" style="width: 300px;">
 </div>
 
+<br/>
+
 ## 3. 기능
 ### 구독 감사 카드 모달창
 ![구독 감사 카드 모달창 gif](./img/readme/subscribe-modal.gif)
 * 구독 버튼을 누르면 구독 감사 카드 모달창이 나타난다.
+
+<br/>
 
 ### 무한 스크롤
 ![무한 스크롤 gif](./img/readme/inf-scroll.gif)
@@ -54,21 +66,29 @@
 <img src="img/readme/show-more-btn.png" style="height: 100px;">
 <img src="img/readme/stop-scrooling-btn.png" style="height: 100px;">
 
+<br/>
+
 ### 원본 이미지 보기
 ![원본 이미지 보기 gif](./img/readme/original-img-modal.gif)
 * 페이지의 이미지들은 왜곡 없이 1:1 비율로 적용하여 대부분 잘려서 보인다.
 * 원본의 비율 그대로의 이미지를 보기 위해 이미지를 클릭했을 때 이미지 모달창이 나타나도록 했다.
+
+<br/>
 
 ### 상/하단 이동 버튼
 ![상/하단 이동 버튼 gif](./img/readme/top-bottom-btn.gif)
 * 무한 스크롤 기능을 이용하면 페이지가 계속해서 길어진다.
 * 길어진 페이지의 상단과 하단을 부담없이 이동하기 위해서 상/하단 이동 버튼이 필요하다.
 
+<br/>
+
 ### 지도
 ![지도 gif](./img/readme/map.gif)
 * 지도 상태에서는 위치 마커와 여닫을 수 있는 위치정보 오버레이가 있다.
 * 로드뷰/지도 버튼을 누르면 각각 로드뷰/지도 맵으로 넘어간다.
 * 로드뷰/지도 버튼 옆의 아이콘을 누르면 원래의 위치, 시야 방향으로 돌아온다.
+
+<br/>
 
 ## 4. 문제점과 해결 방법
 ### position: relative 이동으로 생기는 빈공간
@@ -79,6 +99,8 @@
 * 해결 방법
   * subscribe 부분을 `position: relative` 속성으로 옮기는 대신 아래의 고양이 이미지를 `margin-top` 속성으로 위로 옮긴다.
   * `margin-top` 속성의 값을 `음수`로 주면 위의 요소와 겹치면서도 아래의 요소들이 모두 같이 올라가기 때문에 의도하지 않은 간격이 생기지 않는다.
+
+<br/>
 
 ### 이미지 번호가 순서대로 안나오는 문제
 * 문제점
@@ -118,9 +140,13 @@
   * for문 자체를 `makeImageList`에서 사용해주면 간단하게 해결되는 문제였다.
   * 처음에는 `addImgList` 변수를 만들지 않고 바로 `innerHTML`에 넣어줬는데 이렇게 하면 `<ul>`를 여는 순간 닫는 태그를 자동완성 해주기 때문에 변수를 따로 지정한 후 마지막에 `innerHTML`로 넣어주어야 한다.
 
+<br/>
+
 ## 5. 추가하고 싶은 기능
 - 다크모드
 - 모바일 UI
+
+<br/>
 
 ## 6. 프로젝트 후기
 이번에 무한 스크롤, 지도 api 등 처음 다뤄보는 기능들을 적용해볼 수 있는 유익한 시간이었습니다. 이번 프로젝트를 통해 제 능력을 테스트 해볼 수 있는 기회가 됐고 남은 기간 더 열심히 달려보겠습니다!
